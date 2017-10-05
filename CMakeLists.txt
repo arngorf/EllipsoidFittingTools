@@ -104,7 +104,7 @@ IF (usePython2)
 ENDIF (usePython2)
 
 INCLUDE_DIRECTORIES (
-    /usr/bin
+#    /usr/bin
     /usr/include
     /usr/local/include
     ${PYTHON27_INCLUDE_DIR}

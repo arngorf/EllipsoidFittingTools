@@ -10,7 +10,7 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/3.9.2/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/home/dith/EllipsoidFittingTools/build/CMakeFiles/3.9.2/CompilerIdC/a.out"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler: /usr/bin/c++ 
@@ -23,33 +23,33 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/3.9.2/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/dith/EllipsoidFittingTools/build/CMakeFiles/3.9.2/CompilerIdCXX/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_128bd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_128bd.dir/build.make CMakeFiles/cmTC_128bd.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_128bd.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_128bd.dir/testCCompiler.c.o   -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp/testCCompiler.c"
-Linking C executable cmTC_128bd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_128bd.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_128bd.dir/testCCompiler.c.o  -o cmTC_128bd 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_69340/fast"
+/usr/bin/make -f CMakeFiles/cmTC_69340.dir/build.make CMakeFiles/cmTC_69340.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_69340.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_69340.dir/testCCompiler.c.o   -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_69340
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_69340.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_69340.dir/testCCompiler.c.o  -o cmTC_69340 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_881e5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_881e5.dir/build.make CMakeFiles/cmTC_881e5.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_881e5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_881e5.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o  -o cmTC_881e5 
+Run Build Command:"/usr/bin/make" "cmTC_3dab6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3dab6.dir/build.make CMakeFiles/cmTC_3dab6.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_3dab6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3dab6.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o  -o cmTC_3dab6 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper
@@ -59,24 +59,24 @@ Thread model: posix
 gcc version 7.2.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_881e5' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9ffuHE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_881e5 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_881e5' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3dab6' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaeUEPK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_3dab6 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3dab6' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_881e5/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_881e5.dir/build.make CMakeFiles/cmTC_881e5.dir/build]
-  ignore line: [make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_881e5]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_881e5.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o  -o cmTC_881e5 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_3dab6/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_3dab6.dir/build.make CMakeFiles/cmTC_3dab6.dir/build]
+  ignore line: [make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_3dab6]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3dab6.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o  -o cmTC_3dab6 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper]
@@ -86,13 +86,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_881e5' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc9ffuHE.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_881e5 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_3dab6' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccaeUEPK.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_3dab6 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc9ffuHE.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccaeUEPK.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -108,7 +108,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_881e5] ==> ignore
+    arg [cmTC_3dab6] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o] ==> ignore
@@ -117,7 +117,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../..]
-    arg [CMakeFiles/cmTC_881e5.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_3dab6.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -142,17 +142,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5043a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5043a.dir/build.make CMakeFiles/cmTC_5043a.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5043a.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_5043a.dir/feature_tests.c.o   -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_5043a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5043a.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5043a.dir/feature_tests.c.o  -o cmTC_5043a 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d33c0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d33c0.dir/build.make CMakeFiles/cmTC_d33c0.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d33c0.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_d33c0.dir/feature_tests.c.o   -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_d33c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d33c0.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d33c0.dir/feature_tests.c.o  -o cmTC_d33c0 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -162,17 +162,17 @@ make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/bui
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b41c7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b41c7.dir/build.make CMakeFiles/cmTC_b41c7.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b41c7.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_b41c7.dir/feature_tests.c.o   -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_b41c7
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b41c7.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b41c7.dir/feature_tests.c.o  -o cmTC_b41c7 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_2a8bc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2a8bc.dir/build.make CMakeFiles/cmTC_2a8bc.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2a8bc.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_2a8bc.dir/feature_tests.c.o   -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2a8bc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a8bc.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_2a8bc.dir/feature_tests.c.o  -o cmTC_2a8bc 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -182,17 +182,17 @@ make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/bui
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_722e1/fast"
-/usr/bin/make -f CMakeFiles/cmTC_722e1.dir/build.make CMakeFiles/cmTC_722e1.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_722e1.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_722e1.dir/feature_tests.c.o   -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.c"
-Linking C executable cmTC_722e1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_722e1.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_722e1.dir/feature_tests.c.o  -o cmTC_722e1 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_a58c0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a58c0.dir/build.make CMakeFiles/cmTC_a58c0.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a58c0.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_a58c0.dir/feature_tests.c.o   -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a58c0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a58c0.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a58c0.dir/feature_tests.c.o  -o cmTC_a58c0 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -200,30 +200,30 @@ make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/bui
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_dacbc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_dacbc.dir/build.make CMakeFiles/cmTC_dacbc.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_dacbc.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_dacbc.dir/testCXXCompiler.cxx.o -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx"
-Linking CXX executable cmTC_dacbc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dacbc.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_dacbc.dir/testCXXCompiler.cxx.o  -o cmTC_dacbc 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_f6346/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6346.dir/build.make CMakeFiles/cmTC_f6346.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_f6346.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_f6346.dir/testCXXCompiler.cxx.o -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_f6346
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6346.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_f6346.dir/testCXXCompiler.cxx.o  -o cmTC_f6346 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_160f5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_160f5.dir/build.make CMakeFiles/cmTC_160f5.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_160f5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_160f5.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_160f5 
+Run Build Command:"/usr/bin/make" "cmTC_9e4c6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9e4c6.dir/build.make CMakeFiles/cmTC_9e4c6.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_9e4c6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e4c6.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9e4c6 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper
@@ -233,24 +233,24 @@ Thread model: posix
 gcc version 7.2.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_160f5' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjQBLg1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_160f5 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_160f5' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9e4c6' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvw22f4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_9e4c6 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9e4c6' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_160f5/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_160f5.dir/build.make CMakeFiles/cmTC_160f5.dir/build]
-  ignore line: [make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_160f5]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_160f5.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_160f5 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_9e4c6/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_9e4c6.dir/build.make CMakeFiles/cmTC_9e4c6.dir/build]
+  ignore line: [make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_9e4c6]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e4c6.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_9e4c6 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper]
@@ -260,13 +260,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.2.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_160f5' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccjQBLg1.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_160f5 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_9e4c6' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccvw22f4.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_9e4c6 /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../.. CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccjQBLg1.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccvw22f4.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -282,7 +282,7 @@ Parsed CXX implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_160f5] ==> ignore
+    arg [cmTC_9e4c6] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/crtbeginS.o] ==> ignore
@@ -291,7 +291,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/7.2.0/../../..]
-    arg [CMakeFiles/cmTC_160f5.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_9e4c6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -314,17 +314,17 @@ Parsed CXX implicit link information from above output:
 
 
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d49bf/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d49bf.dir/build.make CMakeFiles/cmTC_d49bf.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d49bf.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_d49bf.dir/feature_tests.cxx.o -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_d49bf
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d49bf.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d49bf.dir/feature_tests.cxx.o  -o cmTC_d49bf 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_19247/fast"
+/usr/bin/make -f CMakeFiles/cmTC_19247.dir/build.make CMakeFiles/cmTC_19247.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_19247.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_19247.dir/feature_tests.cxx.o -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_19247
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_19247.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_19247.dir/feature_tests.cxx.o  -o cmTC_19247 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -387,17 +387,17 @@ make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/bui
 
 
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_297da/fast"
-/usr/bin/make -f CMakeFiles/cmTC_297da.dir/build.make CMakeFiles/cmTC_297da.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_297da.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_297da.dir/feature_tests.cxx.o -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_297da
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_297da.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_297da.dir/feature_tests.cxx.o  -o cmTC_297da 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_09397/fast"
+/usr/bin/make -f CMakeFiles/cmTC_09397.dir/build.make CMakeFiles/cmTC_09397.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_09397.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_09397.dir/feature_tests.cxx.o -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_09397
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_09397.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_09397.dir/feature_tests.cxx.o  -o cmTC_09397 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -460,17 +460,17 @@ make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/bui
 
 
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c3668/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c3668.dir/build.make CMakeFiles/cmTC_c3668.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c3668.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c3668.dir/feature_tests.cxx.o -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_c3668
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3668.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c3668.dir/feature_tests.cxx.o  -o cmTC_c3668 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_d447d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d447d.dir/build.make CMakeFiles/cmTC_d447d.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_d447d.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_d447d.dir/feature_tests.cxx.o -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_d447d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d447d.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_d447d.dir/feature_tests.cxx.o  -o cmTC_d447d 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -533,17 +533,17 @@ make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/bui
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-Change Dir: /home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp
+Change Dir: /home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c13ba/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c13ba.dir/build.make CMakeFiles/cmTC_c13ba.dir/build
-make[1]: Entering directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c13ba.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_c13ba.dir/feature_tests.cxx.o -c "/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/feature_tests.cxx"
-Linking CXX executable cmTC_c13ba
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c13ba.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c13ba.dir/feature_tests.cxx.o  -o cmTC_c13ba 
-make[1]: Leaving directory '/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_6b5e5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6b5e5.dir/build.make CMakeFiles/cmTC_6b5e5.dir/build
+make[1]: Entering directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_6b5e5.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_6b5e5.dir/feature_tests.cxx.o -c /home/dith/EllipsoidFittingTools/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_6b5e5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6b5e5.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_6b5e5.dir/feature_tests.cxx.o  -o cmTC_6b5e5 
+make[1]: Leaving directory '/home/dith/EllipsoidFittingTools/build/CMakeFiles/CMakeTmp'
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

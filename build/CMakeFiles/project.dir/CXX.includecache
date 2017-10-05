@@ -6,33 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/cuda_kernels/GpuSolver.h
+/home/dith/EllipsoidFittingTools/src/cuda_kernels/GpuSolver.h
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/debug/benchmark.cpp
+/home/dith/EllipsoidFittingTools/src/debug/benchmark.cpp
 benchmark.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/debug/benchmark.hpp
+/home/dith/EllipsoidFittingTools/src/debug/benchmark.hpp
 ../unistd.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/unistd.h
+/home/dith/EllipsoidFittingTools/src/unistd.h
 ../sys/resource.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/sys/resource.h
+/home/dith/EllipsoidFittingTools/src/sys/resource.h
 ../sys/times.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/sys/times.h
+/home/dith/EllipsoidFittingTools/src/sys/times.h
 ../time.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/time.h
+/home/dith/EllipsoidFittingTools/src/time.h
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/debug/benchmark.hpp
+/home/dith/EllipsoidFittingTools/src/debug/benchmark.hpp
 ../unistd.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/unistd.h
+/home/dith/EllipsoidFittingTools/src/unistd.h
 ../time.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/time.h
+/home/dith/EllipsoidFittingTools/src/time.h
 ../sys/time.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/sys/time.h
+/home/dith/EllipsoidFittingTools/src/sys/time.h
 vector
 -
 iostream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/DistPointHyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/DistPointHyperellipsoid.hpp
 algorithm
 -
 exception
@@ -40,13 +40,13 @@ exception
 iostream
 -
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 Hyperellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Hyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Hyperellipsoid.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Ellipsoid.cpp
+/home/dith/EllipsoidFittingTools/src/functions/Ellipsoid.cpp
 Ellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Ellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Ellipsoid.hpp
 Eigen/Core
 -
 Eigen/Dense
@@ -56,15 +56,15 @@ Eigen/Eigenvalues
 iostream
 -
 ellipsoidHelpers.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/ellipsoidHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/ellipsoidHelpers.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Ellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Ellipsoid.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidLeastSquareFit.cpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidLeastSquareFit.cpp
 EllipsoidLeastSquareFit.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidLeastSquareFit.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidLeastSquareFit.hpp
 exception
 -
 iostream
@@ -74,20 +74,22 @@ Eigen/Dense
 Eigen/Eigenvalues
 -
 DistPointHyperellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/DistPointHyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/DistPointHyperellipsoid.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidLeastSquareFit.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidLeastSquareFit.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 Ellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Ellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Ellipsoid.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidMinimizer.cpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidMinimizer.cpp
 EllipsoidMinimizer.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidMinimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidMinimizer.hpp
 exception
 -
 functional
+-
+algorithm
 -
 iostream
 -
@@ -98,55 +100,55 @@ Eigen/Dense
 Eigen/Eigenvalues
 -
 DistPointHyperellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/DistPointHyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/DistPointHyperellipsoid.hpp
 ellipsoidHelpers.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/ellipsoidHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/ellipsoidHelpers.hpp
 Rotation.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Rotation.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Rotation.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidMinimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidMinimizer.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 Ellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Ellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Ellipsoid.hpp
 Minimizer.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDGradient.cpp
+/home/dith/EllipsoidFittingTools/src/functions/FDGradient.cpp
 FDGradient.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDGradient.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDGradient.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDGradient.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDGradient.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDHessian.cpp
+/home/dith/EllipsoidFittingTools/src/functions/FDHessian.cpp
 FDHessian.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDHessian.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDHessian.hpp
 iostream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDHessian.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDHessian.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDJacobian.cpp
+/home/dith/EllipsoidFittingTools/src/functions/FDJacobian.cpp
 FDJacobian.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDJacobian.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDJacobian.hpp
 FDGradient.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDGradient.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDGradient.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDJacobian.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDJacobian.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Hyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Hyperellipsoid.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixAlgorithms.cpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixAlgorithms.cpp
 MatrixAlgorithms.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixAlgorithms.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixAlgorithms.hpp
 iostream
 -
 algorithm
@@ -156,13 +158,13 @@ exception
 Eigen/Dense
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixAlgorithms.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixAlgorithms.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixHelpers.cpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixHelpers.cpp
 MatrixHelpers.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixHelpers.hpp
 assert.h
 -
 stdexcept
@@ -170,57 +172,57 @@ stdexcept
 iostream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixHelpers.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer.cpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer.cpp
 Minimizer.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer.hpp
 Eigen/LU
 -
 FDGradient.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDGradient.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDGradient.hpp
 FDHessian.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/FDHessian.hpp
+/home/dith/EllipsoidFittingTools/src/functions/FDHessian.hpp
 iostream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer1.cpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer1.cpp
 Minimizer1.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer1.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer1.hpp
 cmath
 -
 limits
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer1.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer1.hpp
 functional
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MinimizerN.cpp
+/home/dith/EllipsoidFittingTools/src/functions/MinimizerN.cpp
 MinimizerN.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MinimizerN.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MinimizerN.hpp
 cstring
 -
 iostream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MinimizerN.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MinimizerN.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 Minimizer1.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer1.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer1.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/PyPlot.cpp
+/home/dith/EllipsoidFittingTools/src/functions/PyPlot.cpp
 PyPlot.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/PyPlot.hpp
+/home/dith/EllipsoidFittingTools/src/functions/PyPlot.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/PyPlot.hpp
+/home/dith/EllipsoidFittingTools/src/functions/PyPlot.hpp
 vector
 -
 string
@@ -230,15 +232,15 @@ Python.h
 Eigen/Core
 -
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Rotation.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Rotation.hpp
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 iostream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TaskMaster.hpp
+/home/dith/EllipsoidFittingTools/src/functions/TaskMaster.hpp
 iostream
 -
 thread
@@ -250,9 +252,9 @@ functional
 exception
 -
 TaskWorker.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TaskWorker.hpp
+/home/dith/EllipsoidFittingTools/src/functions/TaskWorker.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TaskWorker.hpp
+/home/dith/EllipsoidFittingTools/src/functions/TaskWorker.hpp
 iostream
 -
 thread
@@ -264,21 +266,21 @@ functional
 exception
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TiffReader.cpp
+/home/dith/EllipsoidFittingTools/src/functions/TiffReader.cpp
 TiffReader.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TiffReader.hpp
+/home/dith/EllipsoidFittingTools/src/functions/TiffReader.hpp
 iostream
 -
 sstream
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TiffReader.hpp
+/home/dith/EllipsoidFittingTools/src/functions/TiffReader.hpp
 tiffio.h
 -
 types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/ellipsoidHelpers.cpp
+/home/dith/EllipsoidFittingTools/src/functions/ellipsoidHelpers.cpp
 chrono
 -
 exception
@@ -292,27 +294,27 @@ sstream
 string
 -
 DistPointHyperellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/DistPointHyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/DistPointHyperellipsoid.hpp
 ellipsoidHelpers.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/ellipsoidHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/ellipsoidHelpers.hpp
 EllipsoidLeastSquareFit.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidLeastSquareFit.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidLeastSquareFit.hpp
 Hyperellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Hyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Hyperellipsoid.hpp
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/ellipsoidHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/ellipsoidHelpers.hpp
 Ellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Ellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Ellipsoid.hpp
 random
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 Eigen/Core
 -
 Eigen/Sparse
 -
 
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/projects/EllipsoidFitting/main.cpp
+/home/dith/EllipsoidFittingTools/src/projects/EllipsoidFitting/main.cpp
 algorithm
 -
 fstream
@@ -327,6 +329,8 @@ string
 -
 vector
 -
+mutex
+-
 Eigen/Core
 -
 Eigen/Dense
@@ -334,31 +338,31 @@ Eigen/Dense
 unsupported/Eigen/MatrixFunctions
 -
 ../../cuda_kernels/GpuSolver.h
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/cuda_kernels/GpuSolver.h
+/home/dith/EllipsoidFittingTools/src/cuda_kernels/GpuSolver.h
 ../../functions/DistPointHyperellipsoid.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/DistPointHyperellipsoid.hpp
+/home/dith/EllipsoidFittingTools/src/functions/DistPointHyperellipsoid.hpp
 ../../functions/ellipsoidHelpers.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/ellipsoidHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/ellipsoidHelpers.hpp
 ../../functions/EllipsoidLeastSquareFit.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidLeastSquareFit.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidLeastSquareFit.hpp
 ../../functions/EllipsoidMinimizer.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/EllipsoidMinimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/EllipsoidMinimizer.hpp
 ../../functions/MatrixAlgorithms.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixAlgorithms.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixAlgorithms.hpp
 ../../functions/MatrixHelpers.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MatrixHelpers.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MatrixHelpers.hpp
 ../../functions/Minimizer.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Minimizer.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Minimizer.hpp
 ../../functions/MinimizerN.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/MinimizerN.hpp
+/home/dith/EllipsoidFittingTools/src/functions/MinimizerN.hpp
 ../../functions/PyPlot.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/PyPlot.hpp
+/home/dith/EllipsoidFittingTools/src/functions/PyPlot.hpp
 ../../functions/Rotation.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/Rotation.hpp
+/home/dith/EllipsoidFittingTools/src/functions/Rotation.hpp
 ../../functions/types.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/types.hpp
+/home/dith/EllipsoidFittingTools/src/functions/types.hpp
 ../../functions/TaskMaster.hpp
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/src/functions/TaskMaster.hpp
+/home/dith/EllipsoidFittingTools/src/functions/TaskMaster.hpp
 
 /usr/include/eigen3/Eigen/Cholesky
 Core

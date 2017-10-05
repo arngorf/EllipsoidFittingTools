@@ -6,5 +6,5 @@ CXX_FLAGS =  -O3 -Wall -Wextra -std=c++11 -fopenmp -Wno-sign-compare -O3 -DNDEBU
 
 CXX_DEFINES = -DNDEBUG
 
-CXX_INCLUDES = -I/usr/bin -I/usr/local/include -isystem /usr/include/python2.7 -isystem /usr/include/eigen3 
+CXX_INCLUDES = -I/usr/local/include -isystem /usr/include/python2.7 -isystem /usr/include/eigen3 
 
