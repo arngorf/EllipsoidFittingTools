@@ -1,3 +1,0 @@
-/home/dith/EllipsoidFittingTools/build/CMakeFiles/rebuild_cache.dir
-/home/dith/EllipsoidFittingTools/build/CMakeFiles/project.dir
-/home/dith/EllipsoidFittingTools/build/CMakeFiles/edit_cache.dir
