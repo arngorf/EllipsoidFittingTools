@@ -1,0 +1,31 @@
+Libraries used:
+*) Cuda
+*) Python2.7 matplotlib
+*) SDL2
+
+Matrix operations:
+*) Addition
+*) Subtraction
+*) Multiplication
+*) Solving sparse/dense matrices (LU decomp?)
+*) Digitalization?
+*) Band Matrix
+
+Various functionality:
+*) Bilinear interpolation
+*) Triangulation (Complete FEM framework)
+*) Map/Reduce
+
+File structure
+|-- cpp_numerics
+    |-- build
+    |-- docs
+    |-- src
+        |-- main.cpp
+        |-- BandMatrix.*pp
+        |-- some_cuda_interface.cpp
+        |-- implementations
+            |-- 2DSmoke.*pp
+        |-- cuda_kernels
+            |-- some_cuda_kernel.cu
+            |-- some_cude_kernel.hpp
