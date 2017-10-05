@@ -1,3 +1,0 @@
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/rebuild_cache.dir
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/project.dir
-/home/dith/Dropbox/Studie Personlig/cpp_numerics/build/CMakeFiles/edit_cache.dir
