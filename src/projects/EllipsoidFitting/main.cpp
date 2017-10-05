@@ -1323,5 +1323,7 @@ int main() {
     //drift_effect_experiments_simulate_with_fitting();
     //driftEstimationMahdieh();
 
+    std::cout << "this is a tezt" << std::endl;
+
     return 0;
 }

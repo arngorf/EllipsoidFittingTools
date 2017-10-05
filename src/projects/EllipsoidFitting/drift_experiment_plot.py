@@ -5,6 +5,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from math import acos, sqrt, cos, sin
 from scipy.stats import norm, cauchy
 from scipy.ndimage.filters import gaussian_filter as gauss
+import os
 
 from matplotlib import rc
 rc('font',**{'family':'sans-serif','sans-serif':['Helvetica']})
@@ -464,6 +465,7 @@ def kxky_directly():
     #plt.show()
     plt.clf()
 
+
     #plt.title('ky 1')
     plt.subplot(3,1,1)
     plt.hist(kys2,bins=bin_ticks, normed=True, color='gray', histtype='step', lw=1.5, label='no drift')
@@ -838,8 +840,8 @@ if __name__ == '__main__':
 
     #testOfRotatedVesiclePointPlot()
 
-    kxky_directly()
-    #kxky_mahdieh()
+    #kxky_directly()
+    kxky_mahdieh()
     #parameterGridProbDistibution()
 
     # Right
