@@ -1321,7 +1321,7 @@ int main() {
     //drift_effect_experiments_simulate_theoretic(); // begone pest
 
     //drift_effect_experiments_simulate_with_fitting();
-    driftEstimationMahdieh();
+    //driftEstimationMahdieh();
 
     return 0;
 }
