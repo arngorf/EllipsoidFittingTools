@@ -22,6 +22,8 @@ public:
 
     Mat getDiagonalMatrix() {return D;};
 
+    Mat getCoefficientMatrix() {return R.transpose()*D*R;};
+
     Vector getRadiiDirection(int i) {return R.row(i).transpose();};
 
     Vector getAlgebraicCoefficients() {return v;};

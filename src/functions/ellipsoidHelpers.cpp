@@ -191,7 +191,8 @@ void CenterAtOrigin(Mat &X) {
     }
 }
 
-void AddNormalDistError(Mat &X, Ellipsoid flipsoid, double variance, bool xyflat) {
+void AddNormalDistError(Mat &X, Ellipsoid flipsoid, double variance, bool xyflat)
+{
     int N = X.rows();
     for (int i = 0; i < N; ++i) {
         double x = X(i,0);
@@ -211,37 +212,46 @@ void AddDrift(Mat &X, double kx, double ky)
     X = X*F;
 }
 
-Mat MakeLayeredX(const Mat &X, Ellipsoid flipsoid, double dz, bool noLayering) {
+Mat MakeLayeredX(const Mat &X, Ellipsoid ellipsoid, double dz, bool noLayering)
+{
     // dh is used here to make sure no points end above or below ellipsoid.
     int N = X.rows();
     Mat LayeredX = X;
 
     double EnergyTolerance = 10e-10;
-    double dt = 0.001;
+    double dtTolerance = 10e-10;
+    double dtInit = 0.1;
 
     double maxZ = X.col(2).maxCoeff();
     double minZ = X.col(2).minCoeff();
     double height = maxZ - minZ;
 
-    if (maxZ < minZ) {
+    if (maxZ < minZ)
+    {
         std::cout << "MakeLayeredX::Error: degenerate ellipsoid thickness." << std::endl;
     }
 
     int M = height/dz;
     int eIndex = 0;
     double errors[M];
-    for (int i = 0; i < M; ++i) {
+    for (int i = 0; i < M; ++i)
+    {
         errors[i] = Random::randN(Random::generator)*dz/2;
-        while (errors[i] >= dz/2 || errors[i] <= -dz/2) {
+
+        while (errors[i] >= dz/2 || errors[i] <= -dz/2)
+        {
             errors[i] = Random::randN(Random::generator)*dz/2;
         }
     }
     double dzp = height/(M-1);
 
-    Vector v = flipsoid.getAlgebraicCoefficients();
+    Vector v = ellipsoid.getAlgebraicCoefficients();
 
-    for (int i = 0; i < N; ++i) {
-        if (!noLayering) {
+    for (int i = 0; i < N; ++i)
+    {
+        double dt = dtInit;
+        if (!noLayering)
+        {
             LayeredX(i,2) -= minZ;
             LayeredX(i,2) /= dzp;
             LayeredX(i,2) += 0.5;
@@ -251,35 +261,59 @@ Mat MakeLayeredX(const Mat &X, Ellipsoid flipsoid, double dz, bool noLayering) {
             LayeredX(i,2) *= dz;
             LayeredX(i,2) += minZ;
         }
-        double prevEnergy = EllipsoidEnergyFromQC(v, LayeredX(i,0), LayeredX(i,1), LayeredX(i,2));
-        while (std::abs(prevEnergy) > EnergyTolerance) {
 
+        double prevEnergy = EllipsoidEnergyFromQC(v, LayeredX(i,0), LayeredX(i,1), LayeredX(i,2));
+
+        while (std::abs(prevEnergy) > EnergyTolerance)
+        {
             // Get normal, energy and modify point
             Mat Normal = getEllipsoidNormal(v, LayeredX(i,0), LayeredX(i,1), LayeredX(i,2), true);
+
             double curEnergy = EllipsoidEnergyFromQC(v, LayeredX(i,0), LayeredX(i,1), LayeredX(i,2));
+
             LayeredX.block(i,0,1,3) -= dt * curEnergy * Normal;
+
             // If worse, try other way
             double newEnergy = EllipsoidEnergyFromQC(v, LayeredX(i,0), LayeredX(i,1), LayeredX(i,2));
-            if (std::abs(newEnergy) > std::abs(prevEnergy)) {
+
+            if (std::abs(prevEnergy - newEnergy) < EnergyTolerance)
+            {
+                break;
+            }
+
+            if (std::abs(newEnergy) > std::abs(prevEnergy))
+            {
                 LayeredX.block(i,0,1,3) += 2 * dt * curEnergy * Normal;
+
                 // Check if better
                 newEnergy = EllipsoidEnergyFromQC(v, LayeredX(i,0), LayeredX(i,1), LayeredX(i,2));
-                if (std::abs(newEnergy) > std::abs(prevEnergy)) {
+
+                if (std::abs(newEnergy) >= std::abs(prevEnergy))
+                {
                     LayeredX.block(i,0,1,3) -= dt * curEnergy * Normal;
-                    std::cout << "Could not put point on ellipsoid. Out of bounds or too large step." << std::endl;
+
+                    dt /= 2.0;
+
+                    if (dt < dtTolerance)
+                    {
+                        break;
+                    }
                 }
             }
 
             prevEnergy = newEnergy;
         }
 
-        if (!noLayering) {
+        if (!noLayering)
+        {
             LayeredX(i,2) += errors[eIndex];
         }
 
     }
-    return LayeredX;
 
+    std::cout << "done layering" << std::endl;
+
+    return LayeredX;
 }
 
 Ellipsoid GetVerifiedEllipsoid(Mat const &X, Vector const &trueRadii, bool &errorFlag, double eps) {
@@ -315,14 +349,55 @@ Ellipsoid GetVerifiedEllipsoid(Mat const &X, Vector const &trueRadii, bool &erro
 Mat GetEllipsoidPointShell(Ellipsoid flipsoid, int N, double dh) {
     Mat X = Mat::Zero(N,3);
 
-    double maxRadii = flipsoid.getRadii().maxCoeff();
+    Vector radii(3);
+    radii = flipsoid.getRadii();
 
-    for (int i = 0; i < N; ++i) {
+    double maxRadii = radii.maxCoeff();
+    double minRadii = radii.minCoeff();
+
+    Vector radiiF(3);
+    for (int i = 0; i < 3; ++i)
+    {
+        radiiF(i) = std::abs(radii(i)) + 10e-10;
+    }
+
+    Vector c(3);
+    c = flipsoid.getCenter();
+
+    Mat R(3,3);
+    R = flipsoid.getRotationMatrix();
+
+    Ellipsoid3 ellipsoid(c, R, radiiF);
+
+    DCPQuery<Vector, Ellipsoid3> peQuery;
+
+    int i = 0;
+
+    while (i < N)
+    {
         Vector y(3);
-        for (int i = 0; i < 3; ++i) {
-            y(i) = flipsoid.getCenter()(i) + (Random::randU(Random::generator) - 0.5) * 4 * maxRadii;
+
+        for (int j = 0; j < 3; ++j)
+        {
+            y(j) = c(j) + (Random::randU(Random::generator) - 0.5) * 2 * (maxRadii + dh);
         }
-        if (std::abs(EllipsoidEnergyFromQC(flipsoid.getAlgebraicCoefficients(), y(0), y(1), y(2))) < dh) {
+
+        if ((y - c).norm() < minRadii - dh) continue;
+
+        //if (std::abs(EllipsoidEnergyFromQC(flipsoid.getAlgebraicCoefficients(), y(0), y(1), y(2))) < dh) {
+        //    X.row(i) = y;
+        //    ++i;
+        //}
+
+        double dist = peQuery(y, ellipsoid).distance; // X.row(i).transpose()
+
+        if (dist != dist)
+        {
+            throw std::domain_error("Distance was NaN!");
+        }
+
+        if (dist < dh)
+        {
             X.row(i) = y;
             ++i;
         }
@@ -554,7 +629,8 @@ double EllipsoidEnergy(Mat const &X, Vector const &radii, Vector const &center, 
     Mat rotate = QuatToMatrix(rotateQuaternion);
 
     Vector radiiF(3);
-    for (int i = 0; i < 3; ++i) {
+    for (int i = 0; i < 3; ++i)
+    {
         radiiF(i) = std::abs(radii(i)) + 10e-10;
     }
 
@@ -567,7 +643,8 @@ double EllipsoidEnergy(Mat const &X, Vector const &radii, Vector const &center, 
     DCPQuery<Vector, Ellipsoid3> peQuery;
 
     double SSD = 0.0;
-    for (int i = 0; i < N; ++i) {
+    for (int i = 0; i < N; ++i)
+    {
         //Vector diff = X.row(i).transpose();
         //Vector prod = invMax * diff.transpose();
         double dist = peQuery(X.row(i).transpose(), ellipsoid).distance;
@@ -580,7 +657,8 @@ double EllipsoidEnergy(Mat const &X, Vector const &radii, Vector const &center, 
     return SSD;
 }
 
-double EllipsoidArea(Ellipsoid &flipsoid) {
+double EllipsoidArea(Ellipsoid &flipsoid)
+{
     Vector radii = flipsoid.getRadii();
     double a = radii(0);
     double b = radii(1);

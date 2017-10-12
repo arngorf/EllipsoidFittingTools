@@ -269,6 +269,7 @@ void modelConsistency() {
 
         // Make test points randomly from shell, layer them, add error
         Mat TestX = GetEllipsoidPointShell(gtFlipsoid, N, dh);
+
         //Mat ScanTestX = MakeLayeredX(TestX, gtFlipsoid, 10, true);
         TranslatePoints(TestX, center);
         AddNormalDistError(TestX, gtFlipsoid, errorVariance, false);
@@ -1105,7 +1106,6 @@ void drift_effect_experiments_simulate_theoretic()
 
 void drift_effect_experiments_simulate_with_fitting()
 {
-    double MajorRadii = 25;
     int numSimulations = 100;
 
     EllipsoidMinimizer ellipMini;
@@ -1136,11 +1136,18 @@ void drift_effect_experiments_simulate_with_fitting()
         if (trueRadii(2) < trueRadii(3)) std::swap(trueRadii(2), trueRadii(3));
         if (trueRadii(1) < trueRadii(2)) std::swap(trueRadii(1), trueRadii(2));
 
-        Mat X = GetEllipsoidXFromRadii(trueRadii);
+        //Mat X = GetEllipsoidXFromRadii(trueRadii);
 
         Mat R(3,3);
 
-        R = RandomRotatePoints(X);
+        //R = RandomRotatePoints(X);
+
+        R = RandomRotationMatrix()*RandomRotationMatrix()*RandomRotationMatrix();
+
+        Ellipsoid trueEllipsoid = Ellipsoid(trueCenter, trueRadii, R);
+
+        Mat X1 = GetEllipsoidPointShell(trueEllipsoid, 50, 0.01);
+        Mat X = MakeLayeredX(X1, trueEllipsoid, 1.0, true);
 
         //AddDrift(X, 0.1, 0.0);
         //AddDrift(X, 0.05, -0.2);
@@ -1172,7 +1179,7 @@ void drift_effect_experiments_simulate_with_fitting()
 
         countMutex.lock();
         ++counter;
-        std::cout << "Completed: " << counter << std::endl;
+        std::cout << "Completed: " << counter << " (Error: " << error << ")" << std::endl;
         countMutex.unlock();
 
         radii_kx1[n] = kx1;
@@ -1306,6 +1313,266 @@ void driftEstimationMahdieh()
     }
 }
 
+void generateDriftedVesicleImages()
+{
+    int numVesicles = 100;
+    double vesicleWidth = 9;
+    int width = 1000;
+    int height = 1000;
+    int depth = 1000;
+
+    std::vector<Mat> mats;
+
+    for (int i = 0; i < numVesicles; ++i)
+    {
+        double a = vesicleWidth + Random::randN(Random::generator);
+        double b = vesicleWidth + Random::randN(Random::generator);
+        double c = vesicleWidth + Random::randN(Random::generator);
+
+        double cx = Random::randU(Random::generator) * width;
+        double cy = Random::randU(Random::generator) * height;
+        double cz = Random::randU(Random::generator) * depth;
+
+        Vector radii(3);
+        Vector center(3);
+
+        center << cx, cy, cz;
+        radii << a, b, c;
+
+        Mat R = RandomRotationMatrix();
+
+        Ellipsoid ellipsoid = Ellipsoid(center, radii, R);
+        Mat H = ellipsoid.getCoefficientMatrix();
+
+        mats.push_back(H);
+    }
+}
+
+void errorEffectOnDriftEstimates()
+{
+    int numSimulations = 2;
+
+    std::vector<double> e_errors(numSimulations);
+    std::vector<double> ee_errors(numSimulations);
+    std::vector<double> ed_errors(numSimulations);
+    std::vector<double> eed_errors(numSimulations);
+    std::vector<double> e_kx(numSimulations);
+    std::vector<double> ee_kx(numSimulations);
+    std::vector<double> ed_kx(numSimulations);
+    std::vector<double> eed_kx(numSimulations);
+    std::vector<double> e_ky(numSimulations);
+    std::vector<double> ee_ky(numSimulations);
+    std::vector<double> ed_ky(numSimulations);
+    std::vector<double> eed_ky(numSimulations);
+
+    std::mutex countMutex;
+
+    int counter = 0;
+
+    #pragma omp parallel for
+    for (int i = 0; i < numSimulations; ++i)
+    {
+        EllipsoidMinimizer ellipMini;
+
+        Vector radii(3);
+        Vector center(3);
+
+        // Make random vesicle parameters
+        center << 0, 0, 0;
+        radii << Random::randU(Random::generator)*5.0 + 7.5
+               , Random::randU(Random::generator)*5.0 + 7.5
+               , Random::randU(Random::generator)*5.0 + 7.5;
+
+        Mat R = RandomRotationMatrix()*RandomRotationMatrix()*RandomRotationMatrix();
+
+        Ellipsoid ellipsoid = Ellipsoid(center, radii, R);
+
+        // Make 4 equal sets of points
+        Mat X = GetEllipsoidPointShell(ellipsoid, 50, 0.01);
+
+        // Add error to two of the sets of points
+        Mat Xe = X;
+        AddNormalDistError(Xe, ellipsoid, 1, false);
+        Mat Xed = Xe;
+
+        // Add drift to two of the sets of points
+        std::cout << "3" << std::endl;
+        Mat Xd = X;
+        AddDrift(Xd, 0.05, -0.2);
+        AddDrift(Xed, 0.05, -0.2);
+
+        // Fit ellipsoids to everything
+        double e_error, ee_error, ed_error, eed_error;
+        bool e_flag, ee_flag, ed_flag, eed_flag;
+
+        std::cout << "5" << std::endl;
+        Ellipsoid ell = ellipMini.FitEllipsoid(X, e_error, e_flag);
+        std::cout << "6" << std::endl;
+        Ellipsoid ell_e = ellipMini.FitEllipsoid(Xe, ee_error, ee_flag);
+        std::cout << "7" << std::endl;
+        Ellipsoid ell_d = ellipMini.FitEllipsoid(Xd, ed_error, ed_flag);
+        std::cout << "8" << std::endl;
+        Ellipsoid ell_ed = ellipMini.FitEllipsoid(Xed, eed_error, eed_flag);
+        std::cout << "9" << std::endl;
+
+        // compare results
+
+        e_errors[i] = e_error;
+        ee_errors[i] = ee_error;
+        ed_errors[i] = ed_error;
+        eed_errors[i] = eed_error;
+
+        double kd, kx, ky;
+        ell.getRadii_k(kd, kd, kx, ky);
+        e_kx[i] = kx;
+        e_ky[i] = ky;
+
+        ell_e.getRadii_k(kd, kd, kx, ky);
+        ee_kx[i] = kx;
+        ee_ky[i] = ky;
+
+        ell_d.getRadii_k(kd, kd, kx, ky);
+        ed_kx[i] = kx;
+        ed_ky[i] = ky;
+
+        ell_ed.getRadii_k(kd, kd, kx, ky);
+        eed_kx[i] = kx;
+        eed_ky[i] = ky;
+
+        countMutex.lock();
+        ++counter;
+        std::cout << "Completed: " << counter << std::endl;
+        countMutex.unlock();
+    }
+
+    // store results
+
+    std::ofstream data_file("errorEffectOnDriftEstimates_data.txt");
+
+    if (data_file.is_open())
+    {
+        data_file << "e_errors = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << e_errors[i] << ", ";
+        }
+        data_file << "]\nee_errors = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << ee_errors[i] << ", ";
+        }
+        data_file << "]\ned_errors = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << ed_errors[i] << ", ";
+        }
+        data_file << "]\need_errors = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << eed_errors[i] << ", ";
+        }
+        data_file << "]\ne_kx = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << e_kx[i] << ", ";
+        }
+        data_file << "]\nee_kx = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << ee_kx[i] << ", ";
+        }
+        data_file << "]\ned_kx = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << ed_kx[i] << ", ";
+        }
+        data_file << "]\need_kx = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << eed_kx[i] << ", ";
+        }
+        data_file << "]\ne_ky = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << e_ky[i] << ", ";
+        }
+        data_file << "]\nee_ky = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << ee_ky[i] << ", ";
+        }
+        data_file << "]\ned_ky = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << ed_ky[i] << ", ";
+        }
+        data_file << "]\need_ky = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << eed_ky[i] << ", ";
+        }
+        data_file << "]";
+
+        data_file.close();
+    }
+}
+
+void varianceOfDriftGivenRandomEllipsoids()
+{
+    int numSimulations = 4950;
+
+    std::vector<double> kxs(numSimulations);
+
+    std::mutex countMutex;
+
+    int counter = 0;
+
+    #pragma omp parallel for
+    for (int i = 0; i < numSimulations; ++i)
+    {
+        Vector radii(3);
+        Vector center(3);
+
+        // Make random vesicle parameters
+        center << 0, 0, 0;
+        radii << Random::randU(Random::generator)*5.0 + 7.5
+               , Random::randU(Random::generator)*5.0 + 7.5
+               , Random::randU(Random::generator)*5.0 + 7.5;
+
+        Mat R = RandomRotationMatrix()*RandomRotationMatrix()*RandomRotationMatrix();
+
+        Ellipsoid ellipsoid = Ellipsoid(center, radii, R);
+
+        double kd, kx;
+
+        ellipsoid.getRadii_k(kd,kd,kx,kd);
+
+        kxs[i] = kx;
+
+        countMutex.lock();
+        ++counter;
+        std::cout << "Completed: " << counter << std::endl;
+        countMutex.unlock();
+    }
+
+    std::ofstream data_file("many_kxs.txt");
+
+    if (data_file.is_open())
+    {
+        data_file << "kxs = [";
+        for (int i = 0; i < numSimulations; ++i)
+        {
+            data_file << kxs[i];
+
+            if (i < numSimulations - 1) data_file << ",";
+        }
+        data_file << "]\n";
+
+        data_file.close();
+    }
+
+}
+
 int main() {
 
     //testAngleCorrelation();
@@ -1320,10 +1587,10 @@ int main() {
     //radii2DErrorPlotBothMethods(true, true);
     //drift_effect_experiments_simulate_theoretic(); // begone pest
 
-    //drift_effect_experiments_simulate_with_fitting();
+    drift_effect_experiments_simulate_with_fitting();
     //driftEstimationMahdieh();
-
-    std::cout << "this is a tezt" << std::endl;
+    //errorEffectOnDriftEstimates();
+    //varianceOfDriftGivenRandomEllipsoids();
 
     return 0;
 }
