@@ -32,6 +32,10 @@ Ellipsoid::Ellipsoid(Vector const &center, Vector const &radii, Mat const &R)
     v(3) = H(1,0);
     v(4) = H(2,0);
     v(5) = H(2,1);
+    v(6) = -(H(0,0)*center(0) + H(0,1)*center(1) + H(0,2)*center(2));
+    v(7) = -(H(1,0)*center(0) + H(1,1)*center(1) + H(1,2)*center(2));
+    v(8) = -(H(2,0)*center(0) + H(2,1)*center(1) + H(2,2)*center(2));
+    v(9) = center.transpose()*H*center - 1;
 
     // Missing calculation of v for completion.
 }

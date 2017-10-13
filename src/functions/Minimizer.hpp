@@ -6,7 +6,7 @@
 class Minimizer {
 public:
 
-    Minimizer(double tolerance = 10e-10, int maxIter = 50000, double dxConst = 1.0, double dxMax = 100.0);
+    Minimizer(double tolerance = 10e-8, int maxIter = 5000, double dxConst = 1.0, double dxMax = 100.0);
 
     Vector Minimize(std::function<double(const Vector &)> const& F, Vector const &xInit, bool &fail_flag);
 

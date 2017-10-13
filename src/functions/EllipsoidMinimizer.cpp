@@ -8,6 +8,7 @@
 
 #include <Eigen/Dense>
 #include <Eigen/Eigenvalues>
+#include <unsupported/Eigen/NonLinearOptimization>
 
 #include "DistPointHyperellipsoid.hpp"
 #include "ellipsoidHelpers.hpp"
@@ -27,7 +28,8 @@ Ellipsoid EllipsoidMinimizer::FitEllipsoid(Mat const &XIn, double &error, bool &
 
     // Approximate the maximum point spread for radii initial value
     double maxd = 0;
-    for (int i = 0; i < 3; ++i){
+    for (int i = 0; i < 3; ++i)
+    {
         maxd = std::max(maxd, X.col(i).maxCoeff()-X.col(i).minCoeff());
     }
 
@@ -40,17 +42,15 @@ Ellipsoid EllipsoidMinimizer::FitEllipsoid(Mat const &XIn, double &error, bool &
     int successCount = 0;
     int failCount = 0;
 
-    for (int i = 0; i < 25; ++i) {
+    while(true) {
 
         Vector center(3);
         Vector radii(3);
-        if (i == 0) {
-            radii << maxd/2, maxd/2, maxd/2;
-        } else {
-            radii << maxd * (Random::randU(Random::generator)-0.5),
-                     maxd * (Random::randU(Random::generator)-0.5),
-                     maxd * (Random::randU(Random::generator)-0.5);
-        }
+
+        radii << maxd * (Random::randU(Random::generator)-0.5),
+                 maxd * (Random::randU(Random::generator)-0.5),
+                 maxd * (Random::randU(Random::generator)-0.5);
+
         center << 0,0,0;
         Mat rotate = RandomRotationMatrix();
 
@@ -72,23 +72,26 @@ Ellipsoid EllipsoidMinimizer::FitEllipsoid(Mat const &XIn, double &error, bool &
 
         std::sort(errors.begin(), errors.end());
 
-        if (errors.size() >= 5)
+        std::cout << "Done Fitting Once, Error: " << latestAvgDist << std::endl;
+
+        if (errors.size() >= 10)
         {
-            if (std::abs(errors[0] - errors[4]) < 1.0)
+            if (std::abs(errors[0] - errors[9]) < 1.0)
             {
-                std::cout << "broke out since 5 best fits are close (Total: " << errors.size() << ")" << std::endl;
+                std::cout << "broke out since 10 best fits are close (Total: " << errors.size() << ")" << std::endl;
                 break;
             }
         }
 
-        if (successCount >= 10)
+        if (successCount >= 25)
         {
-            std::cout << "broke out after 10 successful fits" << std::endl;
+            std::cout << "broke out after 25 successful fits" << std::endl;
             break;
         }
-        if (failCount == 25)
+        if (failCount == 50)
         {
             std::cout << "Did not successfully converge for any initial condition" << std::endl;
+            break;
         }
     }
 

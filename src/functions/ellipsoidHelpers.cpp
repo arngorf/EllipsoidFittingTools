@@ -31,19 +31,28 @@ inline bool fileExists(const std::string& name) {
 }
 
 Mat getEllipsoidNormal(Vector v, double x, double y, double z, bool xyflat) {
+
     double A = v(0); double B = v(1); double C = v(2);
     double D = v(3); double E = v(4); double F = v(5);
     double G = v(6); double H = v(7); double I = v(8);
-    Mat n(1,3);
+
+    Vector n(3);
+
     n(0,0) = 2*A*x + 2*D*y + 2*E*z + 2*G;
     n(0,1) = 2*B*y + 2*D*x + 2*F*z + 2*H;
-    if (xyflat) {
-        n(0,2) = 0.0;
-    } else {
-        n(0,2) = 2*C*z + 2*E*x + 2*F*y + 2*I;
+
+    if (xyflat)
+    {
+        n(2) = 0.0;
     }
-    double d = sqrt(n(0,0)*n(0,0) + n(0,1)*n(0,1) + n(0,2)*n(0,2));
+    else
+    {
+        n(2) = 2*C*z + 2*E*x + 2*F*y + 2*I;
+    }
+
+    double d = sqrt(n(0)*n(0) + n(1)*n(1) + n(2)*n(2));
     n *= 1.0/d;
+
     return n;
 }
 
@@ -398,6 +407,20 @@ Mat GetEllipsoidPointShell(Ellipsoid flipsoid, int N, double dh) {
 
         if (dist < dh)
         {
+            Vector normal(3);
+            normal = getEllipsoidNormal(flipsoid.getAlgebraicCoefficients(), y(0), y(1), y(2), false);
+
+            //Vector y1(3);
+            //Vector y2(3);
+
+            //y1 = y - dist*normal;
+            //y2 = y + dist*normal;
+
+            //double dist1 = peQuery(y1, ellipsoid).distance;
+            //double dist2 = peQuery(y2, ellipsoid).distance;
+
+            //std::cout << "dist1, dist2: " << dist1 << ", " << dist2 << std::endl;
+
             X.row(i) = y;
             ++i;
         }

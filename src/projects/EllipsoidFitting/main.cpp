@@ -1108,8 +1108,6 @@ void drift_effect_experiments_simulate_with_fitting()
 {
     int numSimulations = 100;
 
-    EllipsoidMinimizer ellipMini;
-
     std::vector<double> radii_kx1(numSimulations);
     std::vector<double> radii_ky1(numSimulations);
     std::vector<double> radii_kx2(numSimulations);
@@ -1122,6 +1120,8 @@ void drift_effect_experiments_simulate_with_fitting()
     #pragma omp parallel for
     for (int n = 0; n < numSimulations; ++n)
     {
+        EllipsoidMinimizer ellipMini;
+
         Vector trueCenter(3);
 
         trueCenter << 0, 0, 0;
@@ -1146,27 +1146,13 @@ void drift_effect_experiments_simulate_with_fitting()
 
         Ellipsoid trueEllipsoid = Ellipsoid(trueCenter, trueRadii, R);
 
-        Mat X1 = GetEllipsoidPointShell(trueEllipsoid, 50, 0.01);
-        Mat X = MakeLayeredX(X1, trueEllipsoid, 1.0, true);
+        Mat X = GetEllipsoidPointShell(trueEllipsoid, 50, 0.00005);
+        //Mat X = MakeLayeredX(X1, trueEllipsoid, 1.0, true);
 
         //AddDrift(X, 0.1, 0.0);
-        //AddDrift(X, 0.05, -0.2);
+        AddDrift(X, 0.05, -0.2);
 
         double hyperError;
-
-        Vector testCenter(3);
-        Vector testRadii(3);
-        Mat testRotate(3,3);
-
-        testCenter << 0, 0, 0;
-        testRotate = Mat::Identity(3,3);
-        testRadii << 25, 25, 25;
-
-        //bool fail_flag = false;
-
-        //ellipMini.GetMinimum(X, testRadii, testCenter, testRotate, fail_flag);
-
-        //Ellipsoid ellipsoid = Ellipsoid(testCenter, testRadii, testRotate);
 
         double error;
         bool errorFlag = false;
@@ -1188,7 +1174,7 @@ void drift_effect_experiments_simulate_with_fitting()
         radii_ky2[n] = ky2;
     }
 
-    std::cout << "kxs1 = [";
+    /*std::cout << "kxs1 = [";
     for (int i = 0; i < numSimulations; ++i)
     {
         std::cout << radii_kx1[i];
@@ -1202,9 +1188,9 @@ void drift_effect_experiments_simulate_with_fitting()
         std::cout << radii_ky1[i];
         if (i == numSimulations - 1) std::cout << "]\n";
         else std::cout << ", ";
-    }
+    }*/
 
-    std::cout << "kxs2 = [";
+    std::cout << "kxs = [";
     for (int i = 0; i < numSimulations; ++i)
     {
         std::cout << radii_kx2[i];
@@ -1212,7 +1198,7 @@ void drift_effect_experiments_simulate_with_fitting()
         else std::cout << ", ";
     }
 
-    std::cout << "kys2 = [";
+    std::cout << "kys = [";
     for (int i = 0; i < numSimulations; ++i)
     {
         std::cout << radii_ky2[i];
