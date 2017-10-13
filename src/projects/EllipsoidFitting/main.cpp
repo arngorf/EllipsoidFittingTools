@@ -1505,50 +1505,54 @@ void errorEffectOnDriftEstimates()
 
 void varianceOfDriftGivenRandomEllipsoids()
 {
-    int numSimulations = 4950;
+    int numSimulations = 200;
 
-    std::vector<double> kxs(numSimulations);
-
-    std::mutex countMutex;
+    std::vector<double> errors(numSimulations);
 
     int counter = 0;
 
-    #pragma omp parallel for
     for (int i = 0; i < numSimulations; ++i)
     {
-        Vector radii(3);
-        Vector center(3);
+        int numEllipsoids = i+1;
 
-        // Make random vesicle parameters
-        center << 0, 0, 0;
-        radii << Random::randU(Random::generator)*5.0 + 7.5
-               , Random::randU(Random::generator)*5.0 + 7.5
-               , Random::randU(Random::generator)*5.0 + 7.5;
+        errors[i] = 0;
 
-        Mat R = RandomRotationMatrix()*RandomRotationMatrix()*RandomRotationMatrix();
+        for (int j = 0; j < numEllipsoids; ++j)
+        {
+            Vector radii(3);
+            Vector center(3);
 
-        Ellipsoid ellipsoid = Ellipsoid(center, radii, R);
+            // Make random vesicle parameters
+            center << 0, 0, 0;
+            radii << Random::randU(Random::generator)*5.0 + 7.5
+                   , Random::randU(Random::generator)*5.0 + 7.5
+                   , Random::randU(Random::generator)*5.0 + 7.5;
 
-        double kd, kx;
+            Mat R = RandomRotationMatrix()*RandomRotationMatrix()*RandomRotationMatrix();
 
-        ellipsoid.getRadii_k(kd,kd,kx,kd);
+            Ellipsoid ellipsoid = Ellipsoid(center, radii, R);
 
-        kxs[i] = kx;
+            double kd, kx;
 
-        countMutex.lock();
+            ellipsoid.getRadii_k(kd,kd,kx,kd);
+
+            errors[i] += kx;
+        }
+
+        errors[i] /= numEllipsoids;
+
         ++counter;
         std::cout << "Completed: " << counter << std::endl;
-        countMutex.unlock();
     }
 
     std::ofstream data_file("many_kxs.txt");
 
     if (data_file.is_open())
     {
-        data_file << "kxs = [";
+        data_file << "errors = [";
         for (int i = 0; i < numSimulations; ++i)
         {
-            data_file << kxs[i];
+            data_file << errors[i];
 
             if (i < numSimulations - 1) data_file << ",";
         }
@@ -1573,10 +1577,10 @@ int main() {
     //radii2DErrorPlotBothMethods(true, true);
     //drift_effect_experiments_simulate_theoretic(); // begone pest
 
-    drift_effect_experiments_simulate_with_fitting();
+    //drift_effect_experiments_simulate_with_fitting();
     //driftEstimationMahdieh();
     //errorEffectOnDriftEstimates();
-    //varianceOfDriftGivenRandomEllipsoids();
+    varianceOfDriftGivenRandomEllipsoids();
 
     return 0;
 }
